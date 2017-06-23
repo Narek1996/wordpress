@@ -15,7 +15,7 @@ function aag_setup(){
 
 
     add_theme_support('post-thumbnails');
-    set_post_thumbnail_size(200,300);
+    set_post_thumbnail_size(360,300);
 
     add_theme_support('html5',array(
         'search_form',
@@ -57,3 +57,7 @@ function aag_scripts(){
     wp_enqueue_script('custom',get_template_directory_uri().'/js/custom.js');
 }
 add_action('wp_enqueue_scripts','aag_scripts');
+
+add_filter('excerpt_more',function($more){
+    return '...';
+});

@@ -112,58 +112,41 @@
 
 <!-- WORK SECTION -->
 <section id="work" class="parallax-section">
-     <div class="container">
-          <div class="row">
+    <div class="col-md-12 col-sm-12">
+        <!-- SECTION TITLE -->
+        <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+            <h2>Seleted Designs</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
+        </div>
+    </div>
 
-               <div class="col-md-12 col-sm-12">
-                    <!-- SECTION TITLE -->
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                         <h2>Seleted Designs</h2>
-                         <p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
-                    </div>
-               </div>
 
-               <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                         <a href="images/work-image1.jpg" class="image-popup">
-                              <div class="work-thumb-overlay">
-                                   <h4 class="white-color">First Title</h4>
-                                   <h2>Graphic Design</h2>
-                              </div>
-                              <img src="images/work-image1.jpg" class="img-responsive" alt="Work 1">
-                         </a>
-                    </div>
-               </div>
+              <?php if(have_posts() ) :  ?>
+                  <?php while (have_posts()):the_post(); ?>
+    <div class="container">
+        <div class="row">
 
-               <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                         <a href="images/work-image2.jpg" class="image-popup">
-                              <div class="work-thumb-overlay">
-                                   <h4 class="white-color">Title Two</h4>
-                                   <h2>Photography</h2>
-                              </div>
-                              <img src="images/work-image2.jpg" class="img-responsive" alt="Work 2">
-                         </a>
-                    </div>
-               </div>
 
-               <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                         <a href="images/work-image3.jpg" class="image-popup">
-                              <div class="work-thumb-overlay">
-                                   <h4 class="white-color">Third Title</h4>
-                                   <h2>illustration</h2>
-                              </div>
-                              <img src="images/work-image3.jpg" class="img-responsive" alt="Work 3">
-                         </a>
-                    </div>
-               </div>
+            <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
+                <!-- WORK THUMB -->
+                <div class="work-thumb">
+                    <a href="<?php the_post_thumbnail_url()?>" class="image-popup">
+                        <div class="work-thumb-overlay">
+                            <h4 class="white-color">Name</h4>
+                            <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+                            <p class="post_readmore pull-right"><a href="<?php the_permalink();?>">Read more </a></p>
+                        </div>
+                        <?php the_post_thumbnail()?>
+                    </a>
+                </div>
+            </div>
+                  <?php endwhile; ?>
+              <?php endif; ?>
 
-          </div>
-     </div>
+
+
+
+
 </section>
 
 
@@ -217,5 +200,6 @@
           </div>
      </div>
 </section>
+
 
 <?php get_footer(); ?>
