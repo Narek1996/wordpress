@@ -1,0 +1,2 @@
+# wordpress
+new templet
