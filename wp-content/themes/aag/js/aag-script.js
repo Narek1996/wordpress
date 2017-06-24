@@ -2,7 +2,7 @@
  * Created by narek on 24.06.2017.
  */
 $(document).ready(function () {
-  //  $('li').has('ul').addClass('dropdown').removeChild('a');
+/*sub menu*/
 $( "#menu div ul li:has(ul)").addClass('dropdown').children('a').removeAttr().attr({
     "class":"dropdown-toggle",
     "data-toggle":"dropdown",
@@ -14,3 +14,4 @@ $( "#menu div ul li:has(ul)").addClass('dropdown').children('a').removeAttr().at
 
 
 })
+
