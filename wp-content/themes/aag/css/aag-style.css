@@ -14,3 +14,20 @@
 .post_readmore>a{
     color: white;
 }
+/* Second Level */
+/*
+#menu div ul li ul {
+    display:none;
+}
+#menu div ul li ul li a {
+    width:160px;
+    list-style: none;
+}
+#menu div ul li:hover ul {
+    display: block;
+    position: absolute;
+    top: 26px;
+    z-index: 888;
+    background: #9aa4e2;
+}
+*/

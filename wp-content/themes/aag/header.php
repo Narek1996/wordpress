@@ -24,7 +24,6 @@
 </head>
 <body <?php body_class(); ?>>
 
-
 <nav class="navbar navbar-default headre_menu">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,7 +38,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="menu">
             <?php
 
             wp_nav_menu(array(
@@ -47,7 +46,7 @@
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'menu_class' =>'nav navbar-nav header_navbar',
                 'menu_id' => '',
-                'depth' => 1
+                'depth' => 3,
             ));
             ?>
         </div><!-- /.navbar-collapse -->
