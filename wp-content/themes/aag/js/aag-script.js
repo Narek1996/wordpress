@@ -1,6 +1,3 @@
-/**
- * Created by narek on 24.06.2017.
- */
 $(document).ready(function () {
 /*sub menu*/
 $( "#menu div ul li:has(ul)").addClass('dropdown').children('a').removeAttr().attr({
